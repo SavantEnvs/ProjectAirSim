@@ -1,0 +1,9 @@
+project: savantenvs/ProjectAirSim
+target: mavlink-log
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mavlink-log/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_mavlink_log
+    libfuzzer: true
+    timeout: 10

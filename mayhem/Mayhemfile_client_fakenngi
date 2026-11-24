@@ -1,0 +1,9 @@
+project: savantenvs/ProjectAirSim
+target: client-fakenngi
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/client-fakenngi/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_client_fakenngi
+    libfuzzer: true
+    timeout: 10

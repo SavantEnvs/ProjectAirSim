@@ -1,0 +1,9 @@
+project: savantenvs/ProjectAirSim
+target: topic-message
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/topic-message/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_topic_message
+    libfuzzer: true
+    timeout: 10

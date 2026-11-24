@@ -1,0 +1,9 @@
+project: savantenvs/ProjectAirSim
+target: client-response
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/client-response/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_client_response
+    libfuzzer: true
+    timeout: 10

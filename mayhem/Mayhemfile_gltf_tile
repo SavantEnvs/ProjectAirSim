@@ -1,0 +1,9 @@
+project: savantenvs/ProjectAirSim
+target: gltf-tile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gltf-tile/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_gltf_tile
+    libfuzzer: true
+    timeout: 10
